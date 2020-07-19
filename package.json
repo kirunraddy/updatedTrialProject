@@ -1,0 +1,21 @@
+{
+  "name": "trial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "apl": "nodemon src/app"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap-confirm-delete": "^2.1.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.2"
+  },
+  "description": ""
+}
