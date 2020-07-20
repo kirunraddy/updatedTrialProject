@@ -71,4 +71,22 @@ app.controller("contactController", function ($scope, $http) {
     $("body").removeClass("modal-open");
     $(".modal-backdrop").remove();
   };
+
+  $scope.delRow = function () {
+    $("#danger").modal({ show: true });
+  };
+
+  $scope.deleteAll = function () {
+    $scope.contactlist = "";
+    $http
+      .delete("/contact/delAll")
+      .success(function (res) {
+        $scope.clear();
+        refresh();
+        console.log(res);
+      })
+      .error(function (err) {
+        console.log(err);
+      });
+  };
 });
